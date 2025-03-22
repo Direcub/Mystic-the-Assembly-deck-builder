@@ -15,12 +15,8 @@ class Deck:
         self.cards = cards
         self.commander = commander
         if format == "commander":
-            self.add_cards(commander)
+            self.add_cards(commander) #sets commander as first card, and ensure you dont end up in a 101 card scenario
             self.deck_color = commander['colorIdentity']
-
-    def error(self):
-        print("fuck")
-        raise "fuck"
     
     def current_list(self):
         print(f"{self.cards}")
